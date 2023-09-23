@@ -1,0 +1,14 @@
+.catalog {
+  &__content {
+
+  }
+  &__title {
+
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+  }
+}
