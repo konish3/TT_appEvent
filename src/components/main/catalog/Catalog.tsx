@@ -10,9 +10,9 @@ export const Catalog: React.FC = () => {
     <div className="_container">
       <div className="catalog__content">
         <div className="catalog__title">Каталог</div>
-        <ul className="catalog__items">
+        <div className="catalog__items">
           {cards.map(item => <Card key={item.id} {...item} />)}
-        </ul>
+        </div>
       </div>
     </div>
   </section>

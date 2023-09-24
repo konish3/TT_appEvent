@@ -5,7 +5,7 @@ import { ICard } from '../../../../models/ICard';
 
 
 export const Card: React.FC<ICard> = ({id, image, name, price}) => {
-  return <li className="card">
+  return <div className="card">
       <article className="card__content">
         <div className="card__image">
           <img src={image} alt="" />
@@ -22,5 +22,5 @@ export const Card: React.FC<ICard> = ({id, image, name, price}) => {
           </div>
         </div>
       </article>
-  </li>
+  </div>
 }
