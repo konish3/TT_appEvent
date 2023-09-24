@@ -6,14 +6,14 @@ import { Card } from './card.tsx/Card';
 
 export const Catalog: React.FC = () => {
   const cards = useAppSelector((state) => state.cardReducer.cards)
-  return <div className="catalog">
+  return <section className="catalog">
     <div className="_container">
       <div className="catalog__content">
         <div className="catalog__title">Каталог</div>
-        <div className="catalog__items">
-          {cards.map(item => <Card key={item.id} id={item.id} image={item.image} name={item.name} price={item.price} />)}
-        </div>
+        <ul className="catalog__items">
+          {cards.map(item => <Card key={item.id} {...item} />)}
+        </ul>
       </div>
     </div>
-  </div>
+  </section>
 }
