@@ -11,6 +11,10 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 //   }
 // }
 
+// export const addProductToCart = () => {
+
+// }
+
 export const fetchCards = createAsyncThunk(
   'card/fetchAll',
   async (_, thunkAPI) => {

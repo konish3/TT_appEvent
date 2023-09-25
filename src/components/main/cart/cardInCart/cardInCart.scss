@@ -1,0 +1,57 @@
+@import '../../../../index.scss';
+.cardInCart {
+  max-width: 800px;
+  margin-bottom: 15px;
+  &__content {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+  }
+  &__delete {
+    svg {
+
+    }
+  }
+  &__image {
+    margin: 0 20px 0 30px;
+    img {
+      width: 90px;
+      height: 80px;
+      object-fit: contain;
+    }
+  }
+  &__title {
+    font-size: 18px;
+    line-height: 166.667%;
+    display: flex;  
+    flex: 0 1 46%;
+    margin-right: 30px;
+  }
+  &__counter {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    &_minus{
+      font-size: 35px;
+    }
+    &_number{
+      background-color: $black;
+      border: 2px solid gray;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: 300;
+      padding: 5px 15px;
+      color: white;
+      margin: 0 7px;
+    }
+    &_plus{
+      font-size: 28px;
+
+    }
+  }
+  &__price {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}

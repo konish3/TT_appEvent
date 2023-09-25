@@ -2,9 +2,22 @@ import React from 'react';
 import './card.scss';
 import { Link } from 'react-router-dom';
 import { ICard } from '../../../../models/ICard';
+import { useAppDispatch } from '../../../../hooks/redux';
+
+import productToCart, { addProduct } from '../../../../store/reducers/productToCart';
+
+type Props = {
+  id: number,
+  image: string,
+  name: string,
+  price: number,
+  addProductToCart?: Function,
+}
 
 
-export const Card: React.FC<ICard> = ({id, image, name, price}) => {
+export const Card: React.FC<Props> = ({id, image, name, price, addProductToCart}) => {
+
+
   return <div className="card">
       <article className="card__content">
         <div className="card__image">
@@ -18,7 +31,12 @@ export const Card: React.FC<ICard> = ({id, image, name, price}) => {
             <p>{price} руб.</p>
           </div>
           <div className="card__price-and-button_button">
-            <button>В корзину</button>
+            <button 
+              onClick={() => {
+                if(addProductToCart) addProductToCart({id, image, name, price})
+              }
+              }>В корзину
+            </button>
           </div>
         </div>
       </article>

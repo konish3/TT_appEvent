@@ -6,6 +6,7 @@ import { useAppDispatch, useAppSelector } from './hooks/redux';
 import { fetchCards } from './store/reducers/ActionCreators';
 import { Catalog } from './components/main/catalog/Catalog';
 import { Cart } from './components/main/cart/Cart';
+import { Route, Routes } from 'react-router-dom';
 
 
 
@@ -21,8 +22,10 @@ function App() {
   return <div className="wrapper">
     <Header />
     <main className="main">
-      <Catalog />
-      <Cart />
+      <Routes>
+        <Route path='/' element={<Catalog />} />
+        <Route path='cart' element={<Cart />} />
+      </Routes>
     </main>
     <Footer /> 
   </div>
