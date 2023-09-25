@@ -57,3 +57,20 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .header__list {
+    gap: 15px
+  }
+  .header__logo_name{
+    font-size: 18px;
+    margin-left: -40px;
+    font-weight: 500;
+  }
+  .header__list_item{
+    a {
+      letter-spacing: 0;
+      font-size: 14px;
+    }
+  }
+}
