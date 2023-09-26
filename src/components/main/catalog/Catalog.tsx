@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux';
 import { Card } from './card.tsx/Card';
 import { ICard } from '../../../models/ICard';
-import { addProduct } from '../../../store/reducers/productToCart';
+import { addProduct } from '../../../store/reducers/productToCartSlice';
 
 export const Catalog: React.FC = () => {
   const cards = useAppSelector((state) => state.cardReducer.cards)
   const dispatch = useAppDispatch()
 
-  const addProductToCart= ({id, image, name, price}: ICard) => {
+  const addProductToCart = ({id, image, name, price}: ICard) => {
     dispatch(addProduct({id, image, name, price}))
   }
 

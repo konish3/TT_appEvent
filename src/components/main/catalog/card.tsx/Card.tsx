@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { ICard } from '../../../../models/ICard';
 import { useAppDispatch } from '../../../../hooks/redux';
 
-import productToCart, { addProduct } from '../../../../store/reducers/productToCart';
+import productToCart, { addProduct } from '../../../../store/reducers/productToCartSlice';
 
 type Props = {
   id: number,

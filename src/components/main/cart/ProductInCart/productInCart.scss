@@ -1,6 +1,6 @@
 @import '../../../../index.scss';
 .cardInCart {
-  max-width: 800px;
+  
   margin-bottom: 15px;
   &__content {
     background-color: white;
@@ -9,8 +9,9 @@
     padding: 30px;
   }
   &__delete {
-    svg {
+    background-color: inherit;
 
+    svg {
     }
   }
   &__image {
@@ -34,6 +35,8 @@
     align-items: center;
     &_minus{
       font-size: 35px;
+      background: none;
+
     }
     &_number{
       background-color: $black;
@@ -47,6 +50,7 @@
     }
     &_plus{
       font-size: 28px;
+      background: none;
 
     }
   }
