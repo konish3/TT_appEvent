@@ -1,9 +1,10 @@
 import React from "react";
 import "./catalog.scss";
+import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import { Card } from "./card.tsx/Card";
 import { ICard } from "../../../models/ICard";
-import { addProduct } from "../../../store/reducers/productToCart";
+import { addProduct } from "../../../store/reducers/productToCartSlice";
 
 export const Catalog: React.FC = () => {
   const cards = useAppSelector((state) => state.cardReducer.cards);

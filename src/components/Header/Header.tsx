@@ -1,8 +1,12 @@
 import React from 'react';
 import './header.scss'
 import { Link } from 'react-router-dom';
+import { useAppSelector } from '../../hooks/redux';
 
 export const Header: React.FC = () => {
+
+  const countProductInCart = useAppSelector(state => state.productToCart.cards.length)
+
   return (
     <header className='header'>
       <div className="header__container _container">
@@ -39,7 +43,7 @@ export const Header: React.FC = () => {
                 </g>
             </svg>
             </Link>
-            <span>1</span>
+            <span>{countProductInCart}</span>
           </div>
         </div>
       </div>
