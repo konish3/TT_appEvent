@@ -1,5 +1,4 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
-
+import { createAsyncThunk } from "@reduxjs/toolkit";
 
 // export const fetchCard = () => async (dispatch: AppDispatch) => {
 //   try {
@@ -16,21 +15,20 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 // }
 
 export const fetchCards = createAsyncThunk(
-  'card/fetchAll',
+  "card/fetchAll",
   async (_, thunkAPI) => {
     try {
-      const response = await fetch('https://appevent.ru/dev/task1/catalog')
+      const response = await fetch("https://appevent.ru/dev/task1/catalog");
       if (!response.ok) {
-        return thunkAPI.rejectWithValue('Не удалось загрузить товары')
+        return thunkAPI.rejectWithValue("Не удалось загрузить товары");
       }
-      const result = await response.json()
+      const result = await response.json();
       if (result.status === 422) {
-        return thunkAPI.rejectWithValue('Email неккоректный')
+        return thunkAPI.rejectWithValue("Email неккоректный");
       }
-      return result.items
+      return result.items;
     } catch (error) {
-      return thunkAPI.rejectWithValue('Не удалось загрузить товары')
+      return thunkAPI.rejectWithValue("Не удалось загрузить товары");
     }
-    
   }
 );
